@@ -1,0 +1,149 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Katari</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml -auto">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{url_for('reserva')}}">Reserva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}">About</a>
+                    </li>
+
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Katari</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml -auto">
+                <ul class="nav nav-tabs " >
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('reserva')}}">Reserva</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Departamentos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">1</a></li>
+                          <li><a class="dropdown-item" href="#">2</a></li>
+                          <li><a class="dropdown-item" href="#">3</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}">Nosotros</a>
+                    </li>
+
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+  <!-- boton desplegable    Revisar-->
+  <a class="nav-link active" aria-current="page" href="/#">Departamentos</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">1</a></li>
+    <li><a class="dropdown-item" href="#">2</a></li>
+    <li><a class="dropdown-item" href="#">3</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Areas Comunes</a></li>
+  </ul>
+</li>
+
+<!-- carrusel-->
+<section id="informaciones" class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" height: 50vh;>
+
+
+                    <!-- primera imagen-->
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <a href="" >
+                            <img class="d-block w-100" alt="..." width="1200px" height="600px"
+                            src="https://i4.visitchile.com/img/GalleryContent/233/slider/Morro_de_Arica.jpg">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5></h5> <!-- titulo imagen-->
+                            <p></p> <!-- comentario imagen-->
+                        </div>
+                        </a>
+                        
+                    </div>
+                    <!-- segunda imagen-->
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img class="d-block w-100" alt="..."  width="1200px" height="600px"
+                            src="https://ligup-v2.s3.amazonaws.com/arica/users/70438_banner_arica.jpg">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5></h5> <!-- titulo imagen-->
+                            <p></p> <!-- comentario imagen-->
+                        </div>
+                    </div>
+                    <!-- tercera imagen-->
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img class="d-block w-100" alt="..." width="1200px" height="600px"
+                            src="https://mayurutour.com/wp-content/uploads/2020/01/catedral-san-marcos.jpg">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5></h5> <!-- titulo imagen-->
+                            <p></p> <!-- comentario imagen-->
+                        </div>
+                    </div>
+
+
+                <!-- comandos-->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span><!-- cambiar forma de flecha-->
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span> <!-- cambiar forma de flecha-->
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- carrusel-->

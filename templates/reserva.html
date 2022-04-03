@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- contenido-->
+<!-- fecha-->
+<div class="container mt-5 mb-5" style="width: 400px">
+    <h3>Start Date Picker</h3>
+                <input type="text" id="picker1" class="form-control">
+    <h3>End Date Picker</h3>
+                <input type="text" id="picker2" class="form-control">
+</div>
+
+
+<script>
+    
+    $('spicker1').datetimepicker({
+        timepicker: true,
+        datepicker: true,
+        format: 'y-m-d',
+        onShow: function(ct){
+            this.setOptions({
+                maxDate: $('spicker2').val()? $('spicker2').val() false
+            })
+        }
+    })
+    $('spicker2').datetimepicker({
+        timepicker: true,
+        datepicker: true,
+        format: 'y-m-d',
+        onShow: function(ct){
+            this.setOptions({
+                minDate: $('spicker1').val()? $('spicker1').val() false
+            })
+        }
+    })
+
+</script>
+
+{% endblock %}
